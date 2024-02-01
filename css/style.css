@@ -36,6 +36,10 @@ body::-webkit-scrollbar-track {
   background-color: #ddd;
 }
 
+::selection {
+  background-color: var(--main-color);
+  color: #fff;
+}
 /* Components */
 .spacial-heading {
   text-align: center;
@@ -415,7 +419,7 @@ header ul li a {
   display: block;
   color: #fff;
   padding: 5px 15px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 header ul li a:hover,
@@ -1457,6 +1461,7 @@ header .menu:hover {
 
 .contact .contnet-contact input {
   width: 100%;
+  background-color: #e4e4e4;
   padding: 15px;
   margin: 10px 0;
   outline: none;
@@ -1481,6 +1486,7 @@ header .menu:hover {
 .contact .contnet-contact .right textarea {
   width: 100%;
   height: 190px;
+  background-color: #e4e4e4;
   resize: none;
   padding: 15px;
   margin: 10px 0;
