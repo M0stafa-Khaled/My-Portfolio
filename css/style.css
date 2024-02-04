@@ -40,6 +40,7 @@ body::-webkit-scrollbar-track {
   background-color: var(--main-color);
   color: #fff;
 }
+
 /* Components */
 .spacial-heading {
   text-align: center;
@@ -547,6 +548,7 @@ header .menu:hover {
 }
 
 .info {
+  min-width: 500px;
   z-index: 2;
   color: #fff;
 }
@@ -555,13 +557,13 @@ header .menu:hover {
   font-size: 20px;
   line-height: 1.6;
   color: var(--p-color);
-  margin: 8px;
+  margin: 0 8px 0 20px;
   text-transform: capitalize;
 }
 
 
 .info h1 {
-  margin: 15px 8px;
+  margin: 10px 8px;
   font-size: 40px;
 }
 
@@ -612,7 +614,7 @@ header .menu:hover {
 
 .content-landing .image {
   z-index: 2;
-  padding-top: 50px;
+  padding-top: 40px;
   width: 300px;
 }
 
@@ -742,6 +744,7 @@ header .menu:hover {
   }
 
   .content-landing .info {
+    min-width: unset;
     order: 2;
     padding: 5px;
     height: calc(50% - 80px);
@@ -1003,7 +1006,7 @@ header .menu:hover {
 .skills .skills-content .skill .skill-name {
   display: flex;
   align-items: center;
-  width: 180px;
+  width: 230px;
 }
 
 .skills .skills-content .skill .skill-name i {
