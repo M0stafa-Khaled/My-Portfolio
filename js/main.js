@@ -247,12 +247,28 @@ window.addEventListener("scroll", () => {
   }
 });
 // ----------------- End Skills ----------------------
-// Stop form submit when click on button
-const form = document.querySelector("form");
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  form.reset();
-})
+// ----------------- Contact -------------------------
+function sendMail() {
+  const params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+
+  emailjs
+    .send("service_jsibvw8", "template_g3y1i4m", params)
+    .then((res) => {
+      console.log(res);
+      alert("Your message sent successfully!!");
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+    })
+    .catch((err) => console.log(err));
+}
+let sendBtn = document.getElementById("send");
+sendBtn.addEventListener("click", sendMail);
+// ----------------- End Contact ---------------------
 // ----------------- Year footer -----------------
 const year = document.querySelector("footer .year");
 year.innerHTML = new Date().getFullYear();

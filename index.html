@@ -355,18 +355,12 @@
         <h2>Contact Me</h2>
       </div>
       <div class="contnet-contact">
-        <form action="">
-          <div class="left">
-            <input type="text" placeholder="Your Name" />
-            <input type="text" placeholder="Phone" />
-            <input type="email" placeholder="Email" />
-            <input type="text" placeholder="Subject" />
-          </div>
-          <div class="right">
-            <textarea name="" placeholder="Message"></textarea>
-            <input type="submit" value="Send Message" />
-          </div>
-        </form>
+        <div class="form" action="">
+          <input type="text" placeholder="Your Name" id="name" />
+          <input type="email" placeholder="Email" id="email" />
+          <textarea name="" placeholder="Message" id="message"></textarea>
+          <button class="send-message" id="send">Send Message</button>
+        </div>
       </div>
     </div>
   </section>
@@ -393,6 +387,15 @@
   </footer>
   <!--// Footer //-->
   <!-- Js File -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "SJ8NmwFkWXH6wFwJQ",
+      });
+    })();
+  </script>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="js/main.js"></script>
 </body>
