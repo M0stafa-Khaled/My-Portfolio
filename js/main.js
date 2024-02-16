@@ -254,20 +254,28 @@ function sendMail() {
     email: document.getElementById("email").value,
     message: document.getElementById("message").value,
   };
-
   emailjs
     .send("service_jsibvw8", "template_g3y1i4m", params)
     .then((res) => {
-      console.log(res);
-      alert("Your message sent successfully!!");
+      document.getElementById("success").style.display = "flex";
       document.getElementById("name").value = "";
       document.getElementById("email").value = "";
       document.getElementById("message").value = "";
     })
-    .catch((err) => console.log(err));
+    .catch((err) => (document.getElementById("error").style.display = "flex"));
 }
 let sendBtn = document.getElementById("send");
-sendBtn.addEventListener("click", sendMail);
+sendBtn.addEventListener("click", () => {
+  if (document.getElementById("name").value == "") {
+    alert("Please Enter Your Name");
+  } else if (document.getElementById("email").value == "") {
+    alert("Please Enter Your Email");
+  } else if (document.getElementById("message").value == "") {
+    alert("Please Enter Your Message");
+  } else {
+    sendMail();
+  }
+});
 // ----------------- End Contact ---------------------
 // ----------------- Year footer -----------------
 const year = document.querySelector("footer .year");
