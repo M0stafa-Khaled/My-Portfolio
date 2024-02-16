@@ -266,6 +266,8 @@ function sendMail() {
 }
 let sendBtn = document.getElementById("send");
 sendBtn.addEventListener("click", () => {
+  document.getElementById("success").style.display = "none";
+  document.getElementById("error").style.display = "none";
   if (document.getElementById("name").value == "") {
     alert("Please Enter Your Name");
   } else if (document.getElementById("email").value == "") {
@@ -273,9 +275,20 @@ sendBtn.addEventListener("click", () => {
   } else if (document.getElementById("message").value == "") {
     alert("Please Enter Your Message");
   } else {
-    sendMail();
+    // CHECK IF EMAIL IS VALID
+    const re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (
+      !re.test(String(document.getElementById("email").value).toLowerCase())
+    ) {
+      alert("Please Enter A Valid Email");
+      return false;
+    } else {
+      sendMail();
+    }
   }
 });
+
 // ----------------- End Contact ---------------------
 // ----------------- Year footer -----------------
 const year = document.querySelector("footer .year");
