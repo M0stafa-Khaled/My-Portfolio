@@ -294,8 +294,7 @@ body::-webkit-scrollbar-track {
   position: relative;
 }
 
-.nav-bullets .bullet.active::before,
-.nav-bullets .bullet:hover::before {
+.nav-bullets .bullet::before {
   content: "";
   position: absolute;
   width: 8px;
@@ -305,8 +304,16 @@ body::-webkit-scrollbar-track {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.3s;
 }
 
+.nav-bullets .bullet.active::before {
+  opacity: 1;
+}
+.nav-bullets .bullet:hover::before {
+  opacity: 1;
+}
 
 .nav-bullets .bullet .tooltip {
   position: absolute;

@@ -12,7 +12,6 @@ settingIcon.addEventListener("click", () => {
     settingIcon.style.boxShadow = "none";
   }
 });
-
 // Close setting box when click on it or outside
 document.addEventListener("click", (event) => {
   if (
@@ -24,7 +23,6 @@ document.addEventListener("click", (event) => {
     settingIcon.style.boxShadow = "none";
   }
 });
-
 // Check if there is a main color in local storage
 const mainColor = localStorage.getItem("colorOption");
 if (mainColor) {
@@ -38,7 +36,6 @@ if (mainColor) {
     }
   });
 }
-
 // Switch color
 const colorsList = document.querySelectorAll(".colors-list li");
 colorsList.forEach((li) => {
@@ -56,7 +53,6 @@ colorsList.forEach((li) => {
     e.target.classList.add("active");
   });
 });
-
 // Array background image
 let landing = document.querySelector(".landing-page");
 let bgImages = [
@@ -68,11 +64,9 @@ let bgImages = [
   "06.jpg",
   "07.jpg",
 ];
-
 // Random Background option
 let bgOption = true;
 let backgroundInterval;
-
 // Check if there is a background image in local storage
 let bgOptionLocalStorage = localStorage.getItem("bgImageOption");
 if (bgOptionLocalStorage !== null) {
@@ -89,7 +83,6 @@ if (bgOptionLocalStorage !== null) {
       .classList.add("active");
   }
 }
-
 function randomBgImg() {
   if (bgOption === true) {
     backgroundInterval = setInterval(() => {
@@ -100,7 +93,6 @@ function randomBgImg() {
     }, 7000);
   }
 }
-
 // Set active class in cliked button on setting box random background
 let btns = document.querySelectorAll(".option-box .btn button");
 btns.forEach((button) => {
@@ -124,7 +116,6 @@ btns.forEach((button) => {
   });
 });
 randomBgImg();
-
 // Reset setting local storage
 let resetBtn = document.querySelector(".setting-box .option-box .reset");
 resetBtn.addEventListener("click", () => {
@@ -208,7 +199,6 @@ window.addEventListener("scroll", () => {
 });
 // ----------------- End Navigation bar ----------------
 // ----------------- Effect on typing text -------------
-// Effect on typing text
 let typeEffect = new Typed(".type", {
   strings: [
     "Mostafa Khaled",
@@ -261,6 +251,7 @@ window.addEventListener("scroll", () => {
 const form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  form.reset();
 })
 // ----------------- Year footer -----------------
 const year = document.querySelector("footer .year");
