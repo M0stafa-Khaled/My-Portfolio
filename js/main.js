@@ -236,14 +236,6 @@ window.addEventListener("scroll", () => {
       span.style.width = span.dataset.progress;
       span.innerHTML = span.dataset.progress;
     });
-  } else {
-    let skillspans = document.querySelectorAll(
-      ".skills .skill .skill-progress span"
-    );
-    skillspans.forEach((span) => {
-      span.style.width = 0;
-      span.innerHTML = 0;
-    });
   }
 });
 // ----------------- End Skills ----------------------

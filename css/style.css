@@ -1091,10 +1091,6 @@ header .menu:hover {
     padding: 5px;
   }
 
-  .skills .skills-content {
-    padding: 5px;
-  }
-
   .skills .skills-content .skill {
     flex-direction: column;
     width: 100%;
@@ -1127,7 +1123,7 @@ header .menu:hover {
 
 .projects .project-box {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: 20px;
   margin-top: 50px;
   padding: 10px;
@@ -1141,16 +1137,8 @@ header .menu:hover {
       rgba(35, 16, 93, 1) 59%);
   padding: 20px;
   border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
   transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
   overflow: hidden;
   position: relative;
 }
@@ -1160,18 +1148,10 @@ header .menu:hover {
   height: 100%;
   overflow: hidden;
   border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
   position: relative;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
   position: relative;
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
+  transition: 0.5s;;
 }
 
 .projects .project-box .image .overlay {
@@ -1197,11 +1177,9 @@ header .menu:hover {
 .projects .project-box .image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   transition: 0.8s;
-  -webkit-transition: 0.8s;
-  -moz-transition: 0.8s;
-  -ms-transition: 0.8s;
-  -o-transition: 0.8s;
+
 }
 
 .projects .project-box .project:hover .image img {
@@ -1246,6 +1224,7 @@ header .menu:hover {
 .projects .project-box .project .text p {
   color: var(--p-color);
   margin: 10px 0 15px;
+  padding: 0 20px;
 }
 
 .projects .project-box .project .text i {
@@ -1529,7 +1508,7 @@ header .menu:hover {
 
 @media screen and (max-width: 991px) {
   .contact .contnet-contact {
-    padding: 10px;
+    padding: 0;
   }
 
   .contact .contnet-contact .form input {
