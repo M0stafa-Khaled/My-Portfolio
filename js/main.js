@@ -236,6 +236,11 @@ window.addEventListener("scroll", () => {
       span.style.width = span.dataset.progress;
       span.innerHTML = span.dataset.progress;
     });
+  } else {
+    skillspans.forEach((span) => {
+      span.style.width = 0;
+      span.innerHTML = 0;
+    });
   }
 });
 // ----------------- End Skills ----------------------
