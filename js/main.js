@@ -226,7 +226,7 @@ window.addEventListener("scroll", () => {
   let windowHeight = this.innerHeight;
   let windowScrollTop = this.scrollY;
   if (
-    windowScrollTop + 500 >
+    windowScrollTop >
     skillOffsetTop - skillOuterHeight + windowHeight
   ) {
     let skillspans = document.querySelectorAll(
