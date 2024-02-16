@@ -226,18 +226,21 @@ window.addEventListener("scroll", () => {
   let windowHeight = this.innerHeight;
   let windowScrollTop = this.scrollY;
   if (
-    windowScrollTop + 300 >
+    windowScrollTop + 500 >
     skillOffsetTop - skillOuterHeight + windowHeight
   ) {
-    let skillspans = document.querySelectorAll(
+    let skillSpans = document.querySelectorAll(
       ".skills .skill .skill-progress span"
     );
-    skillspans.forEach((span) => {
+    skillSpans.forEach((span) => {
       span.style.width = span.dataset.progress;
       span.innerHTML = span.dataset.progress;
     });
   } else {
-    skillspans.forEach((span) => {
+    let skillSpans = document.querySelectorAll(
+      ".skills .skill .skill-progress span"
+    );
+    skillSpans.forEach((span) => {
       span.style.width = 0;
       span.innerHTML = 0;
     });
@@ -284,9 +287,7 @@ sendBtn.addEventListener("click", () => {
       sendMail();
     }
   }
-});
-
-// ----------------- End Contact ---------------------
+});// ----------------- End Contact ---------------------
 // ----------------- Year footer -----------------
 const year = document.querySelector("footer .year");
 year.innerHTML = new Date().getFullYear();
