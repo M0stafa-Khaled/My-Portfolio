@@ -364,7 +364,7 @@ header {
   position: fixed;
   z-index: 100;
   color: #fff;
-  padding: 5px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -461,7 +461,7 @@ header .menu:hover {
 
 @media (max-width: 991px) {
   header {
-    padding: 5px 20px;
+    padding: 10px 20px;
   }
 
   header ul {
