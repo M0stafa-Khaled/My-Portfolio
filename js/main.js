@@ -222,7 +222,7 @@ let typeEffect = new Typed(".type", {
 let projects = document.querySelector(".project-box");
 let myProjects = [
   {
-    id: 1,
+    id: 99,
     title: "My Portfolio",
     discription: "This is My Portfolio",
     link: "#",
