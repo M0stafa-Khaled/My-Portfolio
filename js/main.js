@@ -270,7 +270,7 @@ for (let i = 0; i < myProjects.length; i++) {
   <div class="project">
           <div class="image">
             <div class="overlay"></div>
-            <img width="100px" src=./images/project-${myProjects[i].id}.webp alt="${myProjects[i].title}" />
+            <img width="100px" src=./images/Project-${myProjects[i].id}.webp alt="${myProjects[i].title}" />
           </div>
           <div class="content">
             <div class="text">
