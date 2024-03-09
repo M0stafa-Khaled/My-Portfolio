@@ -155,7 +155,7 @@ window.addEventListener("scroll", () => {
     let windowHeight = this.innerHeight;
     let windowScrollTop = this.scrollY;
     if (
-      windowScrollTop + 200 >
+      windowScrollTop >
       sectionOffsetTop - sectionOuterHeight + windowHeight
     ) {
       current = section.getAttribute("id");
@@ -270,7 +270,7 @@ for (let i = 0; i < myProjects.length; i++) {
   <div class="project">
           <div class="image">
             <div class="overlay"></div>
-            <img width="100px" src=./images/project-${myProjects[i].id}.webp alt="My Portfolio" />
+            <img width="100px" src=./images/project-${myProjects[i].id}.webp alt="${myProjects[i].title}" />
           </div>
           <div class="content">
             <div class="text">
@@ -292,7 +292,7 @@ window.addEventListener("scroll", () => {
   let windowHeight = this.innerHeight;
   let windowScrollTop = this.scrollY;
   if (
-    windowScrollTop + 500 >
+    windowScrollTop >
     skillOffsetTop - skillOuterHeight + windowHeight
   ) {
     let skillSpans = document.querySelectorAll(
@@ -301,14 +301,6 @@ window.addEventListener("scroll", () => {
     skillSpans.forEach((span) => {
       span.style.width = span.dataset.progress;
       span.innerHTML = span.dataset.progress;
-    });
-  } else {
-    let skillSpans = document.querySelectorAll(
-      ".skills .skill .skill-progress span"
-    );
-    skillSpans.forEach((span) => {
-      span.style.width = 0;
-      span.innerHTML = 0;
     });
   }
 });
