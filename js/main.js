@@ -292,7 +292,7 @@ window.addEventListener("scroll", () => {
   let windowHeight = this.innerHeight;
   let windowScrollTop = this.scrollY;
   if (
-    windowScrollTop + 200 >
+    windowScrollTop + 500 >
     skillOffsetTop - skillOuterHeight + windowHeight
   ) {
     let skillSpans = document.querySelectorAll(
@@ -301,6 +301,14 @@ window.addEventListener("scroll", () => {
     skillSpans.forEach((span) => {
       span.style.width = span.dataset.progress;
       span.innerHTML = span.dataset.progress;
+    });
+  } else {
+    let skillSpans = document.querySelectorAll(
+      ".skills .skill .skill-progress span"
+    );
+    skillSpans.forEach((span) => {
+      span.style.width = 0;
+      span.innerHTML = 0;
     });
   }
 });
