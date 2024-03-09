@@ -56,13 +56,13 @@ colorsList.forEach((li) => {
 // Array background image
 let landing = document.querySelector(".landing-page");
 let bgImages = [
-  "01.jpg",
-  "02.jpg",
-  "03.jpg",
-  "04.jpg",
-  "05.jpg",
-  "06.jpg",
-  "07.jpg",
+  "01.webp",
+  "02.webp",
+  "03.webp",
+  "04.webp",
+  "05.webp",
+  "06.webp",
+  "07.webp",
 ];
 // Random Background option
 let bgOption = true;
@@ -218,6 +218,72 @@ let typeEffect = new Typed(".type", {
   contentType: "html",
 });
 // ----------- End Effect on typing text --------------
+// ----------------- Projects -------------------------
+let projects = document.querySelector(".project-box");
+let myProjects = [
+  {
+    id: 1,
+    title: "My Portfolio",
+    discription: "This is My Portfolio",
+    link: "#",
+  },
+  {
+    id: 2,
+    title: "Shoes Store",
+    discription: "Shoes Store, Buy Shoes",
+    link: "https://shoes-store-ashy.vercel.app",
+  },
+  {
+    id: 3,
+    title: "Kasper Design",
+    discription: "This is a Kasper Design",
+    link: "https://kasper-beta.vercel.app",
+  },
+  {
+    id: 4,
+    title: "To Do List",
+    discription: "To Do List, Add To Do List",
+    link: "https://to-do-list-azure-nine.vercel.app",
+  },
+  {
+    id: 5,
+    title: "Bondi",
+    discription: "This is a Bondi Template create with bootstrap",
+    link: "https://bondi-seven.vercel.app",
+  },
+  {
+    id: 6,
+    title: "مواقيت الصلاة",
+    discription: "مواقيت الصلاة, مواقيت الصلاة",
+    link: "https://prayer-timings-psi.vercel.app",
+  },
+  {
+    id: 7,
+    title: "Leon Template",
+    discription: "This is Leon Template",
+    link: "https://leon-liard.vercel.app",
+  },
+];
+
+for (let i = 0; i < myProjects.length; i++) {
+  projects.innerHTML += `
+  <div class="project">
+          <div class="image">
+            <div class="overlay"></div>
+            <img width="100px" src=./images/project-${myProjects[i].id}.webp alt="My Portfolio" />
+          </div>
+          <div class="content">
+            <div class="text">
+              <h3>${myProjects[i].title}</h3>
+              <p>${myProjects[i].discription}</p>
+              <a href="${myProjects[i].link}" target="_blank"><i class="fa-solid fa-up-right-from-square" target="_blank"></i></a>
+            </div>
+          </div>
+        </div>
+  `;
+}
+
+// ----------------- End Projects ---------------------
 // ----------------- Skills ---------------------------
 const skills = document.querySelector(".skills");
 window.addEventListener("scroll", () => {
@@ -287,7 +353,7 @@ sendBtn.addEventListener("click", () => {
       sendMail();
     }
   }
-});// ----------------- End Contact ---------------------
+}); // ----------------- End Contact ---------------------
 // ----------------- Year footer -----------------
 const year = document.querySelector("footer .year");
 year.innerHTML = new Date().getFullYear();
