@@ -6,4 +6,4 @@
 
 ## Preview
 
-![My-Portfolio](./images/project-1.webp)
+![Preview](./images/project-1.webp)
