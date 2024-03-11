@@ -231,7 +231,7 @@ let myProjects = [
     id: 2,
     title: "Shoes Store",
     discription: "Shoes Store, Buy Shoes",
-    link: "https://shoes-store-ashy.vercel.app",
+    link: "https://shoes-store-pied.vercel.app",
   },
   {
     id: 3,
